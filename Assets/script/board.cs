@@ -22,7 +22,8 @@ public class board : MonoBehaviour
         for (int i = 0; i < 7; i++)
         {
             if (posX == (0.9 * i) + -3.209417)
-                //uses equation to find position of Checker, uses -3.2 as that's the position of starting checker and 0.9 as that's the difference between each checker
+                //uses equation to find position of Checker, uses -3.2 as that's the position of
+                //starting checker and 0.9 as that's the difference between each checker
             {
                 col = i;
             }

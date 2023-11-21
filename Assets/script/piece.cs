@@ -32,6 +32,7 @@ public class Piece : MonoBehaviour
     {
         //this calls the routines once piece is released after being thrown
         StartCoroutine(releasePiece());
+        
         StartCoroutine(respawnPiece());
     }
 
@@ -40,7 +41,6 @@ public class Piece : MonoBehaviour
     IEnumerator releasePiece()
     {
         yield return new WaitForSeconds(releaseTime);
-        //temporary place holder for respawn until turn's are figured out
         GetComponent<SpringJoint2D>().enabled = false;
         interact = false;
         //makes it so the piece can't be moved after it's released
@@ -49,6 +49,7 @@ public class Piece : MonoBehaviour
 
     IEnumerator respawnPiece()
     {
+        //temporary place holder for respawn until turn's are figured out
         yield return new WaitForSeconds(respawnTimer);
         Instantiate(piece, respawnPoint.position, Quaternion.identity);
 
